@@ -1,0 +1,3 @@
+[submodule "vendor/ws4kp-international"]
+	path = vendor/ws4kp-international
+	url = https://github.com/mwood77/ws4kp-international.git

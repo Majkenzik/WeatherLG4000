@@ -1,0 +1,23 @@
+{
+	"appId": "com.weatherlg4000.app",
+	"location": {
+		"query": "New York, USA",
+		"lat": 40.71427,
+		"lon": -74.00597
+	},
+	"units": {
+		"temperature": "F",
+		"wind": "mph",
+		"distance": "mi",
+		"pressure": "inHG",
+		"hours": 12
+	},
+	"locale": "en-US",
+	"widescreen": true,
+	"speed": "normal",
+	"scanLines": false,
+	"tv": {
+		"host": "192.168.1.100",
+		"user": "root"
+	}
+}
