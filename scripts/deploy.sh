@@ -36,7 +36,8 @@ case "${1:-}" in
 		;;
 	screensaver-on)
 		mkdir -p "$ROOT/build"
-		sed "s/__APP_ID__/$APP_ID/" "$ROOT/screensaver/weatherstar-screensaver.sh" > "$ROOT/build/screensaver-hook.sh"
+		MINUTES=$(config "c.get('screensaverMinutes', 15)")
+		sed "s/__APP_ID__/$APP_ID/; s/__MINUTES__/$MINUTES/" "$ROOT/screensaver/weatherstar-screensaver.sh" > "$ROOT/build/screensaver-hook.sh"
 		on_tv "mkdir -p /var/lib/webosbrew/init.d"
 		scp -q "$ROOT/build/screensaver-hook.sh" "$TV:$HOOK"
 		# Plain ssh, no -tt: closing a terminal would hang up the watcher.

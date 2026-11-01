@@ -63,6 +63,7 @@ other way (Homebrew Channel, `ares-install`, webOS Dev Manager).
 | `widescreen` | `true` stretches to 16:9 |
 | `speed` | `very-fast`, `fast`, `normal`, `slow` or `very-slow` |
 | `scanLines` | Retro CRT scan lines |
+| `screensaverMinutes` | After this many minutes as the screen saver, close the app and turn the screen off (any key turns it back on). `0` for no limit. Default `15`. |
 | `appId` | webOS app id |
 | `tv.host`, `tv.user` | Where `deploy.sh` installs to (`TV=<ip> scripts/deploy.sh ...` overrides) |
 
@@ -88,8 +89,9 @@ in Ohio; `Warsaw` finds Warsaw, Poland).
   The log is `/tmp/weatherstar-screensaver.log` on the TV.
 
 **OLED owners:** the WeatherStar layout has static parts (logo, clock, bars).
-Leaving it on for hours can cause image retention, so don't run it as an
-all-day display on an OLED.
+That is why the screen saver turns the screen off after `screensaverMinutes`
+(15 by default). Don't raise it much on an OLED, and don't leave the app
+itself open for hours.
 
 ## Updating upstream
 
