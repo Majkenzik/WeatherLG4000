@@ -13,6 +13,9 @@
 		"hours": 12
 	},
 	"locale": "en-US",
+	"displays": {
+		"marine-forecast": true
+	},
 	"widescreen": true,
 	"speed": "normal",
 	"scanLines": false,

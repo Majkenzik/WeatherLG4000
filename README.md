@@ -4,6 +4,12 @@ The 90s Weather Channel look of [WeatherStar 4000+](https://github.com/mwood77/w
 as an app and screen saver for rooted LG webOS TVs. It works for any city in the world:
 forecasts come from [Open-Meteo](https://open-meteo.com/), no API key needed.
 
+![WeatherStar 4000+ extended forecast for Warsaw on an LG OLED](docs/screenshot.jpg)
+
+![Almanac, local radar and air quality screens](docs/screens.jpg)
+
+<sub>Captured on an LG OLED65B5 (webOS 10.3.2).</sub>
+
 The app runs straight into kiosk mode with your city, units and display options
 baked in, cycles through the forecast screens on its own and refreshes the data
 periodically. Optionally it replaces the TV's screen saver: when the TV's screen
@@ -53,6 +59,7 @@ other way (Homebrew Channel, `ares-install`, webOS Dev Manager).
 | `units.pressure` | `hPa`, `inHG` or `mmHG` |
 | `units.hours` | `12` or `24` |
 | `locale` | Date/time format, e.g. `en-GB` (English, 24-hour) or `pl-PL`. Without it the TV's own locale is used, which for English is 12-hour. |
+| `displays` | Turn screens on or off, e.g. `{"marine-forecast": false}` for an inland city. Ids: `current-weather`, `local-forecast`, `latest-observations`, `hourly`, `hourly-graph`, `travel`, `regional-forecast`, `almanac`, `extended-forecast`, `radar`, `hazards`, `marine-forecast`, `aqi-forecast`. |
 | `widescreen` | `true` stretches to 16:9 |
 | `speed` | `very-fast`, `fast`, `normal`, `slow` or `very-slow` |
 | `scanLines` | Retro CRT scan lines |

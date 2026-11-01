@@ -52,6 +52,8 @@ def query_string(config):
 		'settings-hideWebamp-checkbox': 'true',
 		'settings-speed-select': SPEEDS[config.get('speed', 'normal')],
 	}
+	for display, enabled in config.get('displays', {}).items():
+		params[f'{display}-checkbox'] = str(bool(enabled)).lower()
 	for key, value in config.get('units', {}).items():
 		setting, options = UNIT_OPTIONS[key]
 		if str(value) not in options:
